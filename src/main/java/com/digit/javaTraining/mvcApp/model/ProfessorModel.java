@@ -55,17 +55,19 @@ public class ProfessorModel {
 			PreparedStatement pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, this.username);
 			ResultSet result = pstmt.executeQuery();
-			if (!result.next()) {
-				return false;
-			}
-			if (this.password.equals(result.getString("p_password"))) {
-				this.setName(result.getString("P_name"));
-				this.setAge(result.getInt("p_age"));
-				this.setCourse_id(result.getString("course_id"));
-				return true;
+			if (result.next()) {
+				if (result.getString("p_password").equals(this.password)) {
+					this.setName(result.getString("P_name"));
+					this.setAge(result.getInt("p_age"));
+					this.setCourse_id(result.getString("course_id"));
+					return true;
+				}else { 
+					return false;
+				}
 			}else {
 				return false;
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

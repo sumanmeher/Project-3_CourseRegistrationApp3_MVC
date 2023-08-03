@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class DatabaseModel {
 	public static Connection con;
 	public DatabaseModel() {
-		String url = "jdbc:mysql://localhost:3306/bankingApp";
+		String url = "jdbc:mysql://localhost:3306/crs";
 		String user = "root";
 		String pwd = "Dhoni$1234";
 		try {

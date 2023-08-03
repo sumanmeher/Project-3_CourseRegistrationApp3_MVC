@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Professor Login</h1>
-	<form action="professorLogin">
+	<form action="professorLogin" method="post">
 		<input type="text" name="username" placeholder="username"><br><br>
 		<input type="text" name="password" placeholder="password"><br><br>
 		<input type="submit">
