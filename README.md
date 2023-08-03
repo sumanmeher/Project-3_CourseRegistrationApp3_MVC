@@ -1,1 +1,1 @@
-# Project-3_CourseRegistrationApp3_Servlets
+# Project-3_CourseRegistrationApp3_MVC
