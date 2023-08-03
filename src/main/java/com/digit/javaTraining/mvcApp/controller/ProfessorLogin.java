@@ -19,6 +19,6 @@ public class ProfessorLogin extends HttpServlet{
 	    ProfessorModel professor = new ProfessorModel();
 	    professor.setUsername(username);
 	    professor.setPassword(password);
-	    professor.login();
+	    professor.login(); 
 	}
 }
