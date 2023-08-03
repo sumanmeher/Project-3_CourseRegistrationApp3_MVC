@@ -1,6 +1,8 @@
 package com.digit.javaTraining.mvcApp.model;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class StudentModel {
 	public static Connection con;
@@ -45,5 +47,28 @@ public class StudentModel {
 	public StudentModel() {
 		DatabaseModel db = new DatabaseModel();
 		con=DatabaseModel.con;
+	}
+	public boolean login() {
+		try {
+			String sql = "select * from student where s_username = ?";
+			PreparedStatement pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, this.username);
+			ResultSet result = pstmt.executeQuery();
+			if (result.next()) {
+				if (this.password.equals(result.getString("s_password"))) {
+					this.setName(result.getString("s_name"));
+					this.setAge(result.getInt("s_age"));
+					return true;
+				}else {
+					return false;
+				}
+			}else {
+				return false;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 }
