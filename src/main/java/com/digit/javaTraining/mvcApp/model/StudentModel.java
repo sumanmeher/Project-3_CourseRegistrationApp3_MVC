@@ -58,6 +58,7 @@ public class StudentModel {
 				if (this.password.equals(result.getString("s_password"))) {
 					this.setName(result.getString("s_name"));
 					this.setAge(result.getInt("s_age"));
+					this.setGrade(result.getInt("s_marks"));
 					return true;
 				}else {
 					return false;

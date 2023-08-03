@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-Authenticated.
-<a href="studentMarks.jsp">Get Marks</a>
+<%
+out.println("Your marks is "+session.getAttribute("s_marks"));
+%>
 </body>
 </html>
