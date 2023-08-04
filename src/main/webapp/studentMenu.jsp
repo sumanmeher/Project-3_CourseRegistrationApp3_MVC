@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Student Menu</title>
 </head>
 <body>
 Authenticated.
 <a href="studentMarks.jsp">Get Marks</a>
+<a href="studentScoreCard">Get Score Card</a>
 </body>
 </html>
