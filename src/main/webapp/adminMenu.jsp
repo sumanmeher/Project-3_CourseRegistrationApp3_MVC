@@ -11,7 +11,7 @@
 		<a href="addCourse.jsp">1. Add Course</a>
 	</h3>
 	<h3>
-		<a href="addProfessor.jsp">2. Add Professor</a>
+		<a href="setUnassignedCourses">2. Add Professor</a>
 	</h3>
 	<h3>
 		<a href="addStudent.jsp">3. Add Student</a>

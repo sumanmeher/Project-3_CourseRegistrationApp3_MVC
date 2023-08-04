@@ -2,6 +2,10 @@ package com.digit.javaTraining.mvcApp.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 public class CourseModel {
 	
@@ -68,6 +72,28 @@ public class CourseModel {
 			e.printStackTrace();
 		}
 		return false;
+	}
+	
+	public ArrayList<ArrayList<String>> setUnassignedCourse() {
+		String sql = "select C_id, C_name from course where professor_username is null";
+		ArrayList<ArrayList<String>> arrList = new ArrayList<ArrayList<String>>();
+		
+		try {
+			Statement stmt = con.createStatement();
+			ResultSet result = stmt.executeQuery(sql);
+			
+			while(result.next()) {
+				String  courseId = result.getString("c_id");
+				String courseName = result.getString("c_name");
+				ArrayList<String> tempArr =new ArrayList<String>();
+				tempArr.add(courseId);
+				tempArr.add(courseName);
+				arrList.add(tempArr);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return arrList;
 	}
 	
 	 

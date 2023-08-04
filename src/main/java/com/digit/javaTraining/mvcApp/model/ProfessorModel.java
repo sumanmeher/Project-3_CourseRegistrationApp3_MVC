@@ -76,14 +76,22 @@ public class ProfessorModel {
 	
 	public boolean register() {
 		try {
-			PreparedStatement pstmt = con.prepareStatement("insert into professor (p_username, p_name, p_password, p_age) values(?,?,?,?)");
+			PreparedStatement pstmt = con.prepareStatement("insert into professor (p_username, p_name, p_password, p_age, course_id) values(?,?,?,?,?)");
 			pstmt.setString(1, this.username);
 			pstmt.setString(2, this.name);
 			pstmt.setString(3, this.password);
 			pstmt.setInt(4, this.age);
+			pstmt.setString(5, this.course_id);
 			int x = pstmt.executeUpdate();
 			if(x>0) {
-				return true;
+				pstmt = con.prepareStatement("update course set professor_username = ? where c_id = ?");
+				pstmt.setString(1, this.username);
+				pstmt.setString(2, course_id);
+				x = pstmt.executeUpdate();
+				if(x>0)
+					return true;
+				else
+					return false;
 			}else {
 				return false;
 			}
