@@ -21,8 +21,6 @@ public class ProfessorLogin extends HttpServlet{
 	    ProfessorModel professor = new ProfessorModel();
 	    professor.setUsername(username);
 	    professor.setPassword(password);
-	    System.out.println(username);
-	    System.out.println(password);
 	    boolean isLogin = professor.login(); 
 	    if(isLogin) {
 	    	session.setAttribute("professor_username", professor.getUsername());

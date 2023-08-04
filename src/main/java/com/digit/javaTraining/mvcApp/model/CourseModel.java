@@ -1,8 +1,9 @@
 package com.digit.javaTraining.mvcApp.model;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 
-public class CourseApp {
+public class CourseModel {
 	
 	public static Connection con;
 	
@@ -43,9 +44,30 @@ public class CourseApp {
 	}
 	
 	
-	public CourseApp() {
+	public CourseModel() {
 		DatabaseModel db = new DatabaseModel();
 		con=DatabaseModel.con;
+	}
+	public boolean addCourse() {
+		String sql = "insert into course (c_id, c_name, price, duration, description) values(?,?,?,?,?)";
+		try {
+			PreparedStatement pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, cid);
+			pstmt.setString(2, name);
+			pstmt.setInt(3, price);
+			pstmt.setString(4, duration);
+			pstmt.setString(5, description);
+
+			int x = pstmt.executeUpdate();
+			if(x>0) {
+				return true;
+			}else {
+				return false;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 	
 	 

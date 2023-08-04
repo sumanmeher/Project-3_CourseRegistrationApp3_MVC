@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.digit.javaTraining.mvcApp.model.CourseApp;
+import com.digit.javaTraining.mvcApp.model.CourseModel;
 @WebServlet("/adminLogin")
 public class AdminLogin extends HttpServlet {
 @Override
@@ -19,7 +19,7 @@ protected void service(HttpServletRequest req, HttpServletResponse res) throws S
 	String username= req.getParameter("username");
 	String password= req.getParameter("password");
 	
-	CourseApp c=new CourseApp();
+	CourseModel c=new CourseModel();
 	if(username.equals("admin") && password.equals("Admin")) {
 		res.sendRedirect("adminMenu.jsp");
 	}else {

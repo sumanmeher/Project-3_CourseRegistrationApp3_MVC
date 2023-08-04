@@ -73,4 +73,23 @@ public class ProfessorModel {
 		}
 		return false;
 	}
+	
+	public boolean register() {
+		try {
+			PreparedStatement pstmt = con.prepareStatement("insert into professor (p_username, p_name, p_password, p_age) values(?,?,?,?)");
+			pstmt.setString(1, this.username);
+			pstmt.setString(2, this.name);
+			pstmt.setString(3, this.password);
+			pstmt.setInt(4, this.age);
+			int x = pstmt.executeUpdate();
+			if(x>0) {
+				return true;
+			}else {
+				return false;
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 }

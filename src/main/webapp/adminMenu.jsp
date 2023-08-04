@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-Authenticated.
+	<h3>
+		<a href="addCourse.jsp">1. Add Course</a>
+	</h3>
+	<h3>
+		<a href="addProfessor.jsp">2. Add Professor</a>
+	</h3>
+	<h3>
+		<a href="addStudent.jsp">3. Add Student</a>
+	</h3>
+	<h3>
+		<a href="showAllCourse">4. Show all Courses</a>
+	</h3>
+	<h3>
+		<a href="showAllStudent">5. Show all Students</a>
+	</h3>
+	<h3>
+		<a href="showAllProfessor">6. Show all Professors</a>
+	</h3>
 </body>
 </html>
