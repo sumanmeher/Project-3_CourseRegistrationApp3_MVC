@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Student Menu</title>
+<title>Insert title here</title>
 </head>
 <body>
-Authenticated.
-<a href="studentMarks.jsp">Get Marks</a>
-<a href="studentScoreCard">Get Score Card</a>
+<%
+out.println("Your marks is "+session.getAttribute("s_marks"));
+%>
 </body>
 </html>

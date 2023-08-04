@@ -25,6 +25,7 @@ public class StudentLogin extends HttpServlet{
 	    if(isLogin) {
 	    	System.out.println(username);
 	    	session.setAttribute("student_username", student.getUsername());
+	    	session.setAttribute("s_marks", student.getGrade());
 	    	res.sendRedirect("studentMenu.jsp");
 	    }else { 
 	    	session.setAttribute("failed_name", "Student Login Failed");
