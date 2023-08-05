@@ -11,15 +11,8 @@ public class StudentModel {
 	String password;
 	String name;
 	int age;
+	String courseId;
 	int grade;
-
-	public int getGrade() {
-		return grade;
-	}
-
-	public void setGrade(int grade) {
-		this.grade = grade;
-	}
 
 	public String getUsername() {
 		return username;
@@ -53,6 +46,22 @@ public class StudentModel {
 		this.age = age;
 	}
 
+	public int getGrade() {
+		return grade;
+	}
+
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+
+	public String getCourseId() {
+		return courseId;
+	}
+
+	public void setCourseId(String courseId) {
+		this.courseId = courseId;
+	}
+
 	public StudentModel() {
 		DatabaseModel db = new DatabaseModel();
 		con = DatabaseModel.con;
@@ -80,6 +89,28 @@ public class StudentModel {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return false;
+	}
+
+	public boolean register() {
+		try {
+			PreparedStatement pstmt = con.prepareStatement(
+					"insert into student (s_username, s_name, s_password, s_age, course_id) values(?,?,?,?,?)");
+			pstmt.setString(1, this.username);
+			pstmt.setString(2, this.name);
+			pstmt.setString(3, this.password);
+			pstmt.setInt(4, this.age);
+			pstmt.setString(5, this.courseId);
+			int x = pstmt.executeUpdate();
+			if (x > 0) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		return false;
 	}
 

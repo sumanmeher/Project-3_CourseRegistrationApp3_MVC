@@ -14,8 +14,13 @@
 	<h3>
 		<a href="setUnassignedCourses">2. Add Professor</a>
 	</h3>
+<<<<<<< HEAD
 	<h3> 
 		<a href="addStudent.jsp">3. Add Student</a>
+=======
+	<h3>
+		<a href="setCoursesStudent">3. Add Student</a>
+>>>>>>> branch 'main' of https://github.com/sumanmeher/Project-3_CourseRegistrationApp3_Servlets.git
 	</h3>
 	<h3>
 		<a href="showAllCourse">4. Show all Courses</a>
@@ -57,7 +62,7 @@
 	                        <div class="hero-cta row" style="max-width:fit-content;">
                                 <a class="button button-shadow col col-3 mb-3" href="addCourse.jsp">Add Course</a>
                                 <a class="button button-shadow col col-3" href="setUnassignedCourses">Add Professor</a>
-                                <a class="button button-shadow col col-3" href="addStudent.jsp">Add Student</a>
+                                <a class="button button-shadow col col-3" href="setCoursesStudent">Add Student</a>
                                 
                                  <a class="button button-shadow col col-3" href="showAllCourse">Show all Courses</a>
                                 <a class="button button-shadow col col-3" href="showAllStudent">Show all Students</a>
