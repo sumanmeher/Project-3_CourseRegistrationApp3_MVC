@@ -48,6 +48,11 @@ a {
     -webkit-text-decoration-skip: objects
 }
 
+.btn-success{
+	background-color: #3dd53b;
+	border-color: #3dd53b;
+}
+
 abbr[title] {
     border-bottom: none;
     text-decoration: underline;
@@ -1226,12 +1231,12 @@ label {
     white-space: nowrap;
     margin-left:10px;
     margin-right:10px;
-    transition: 0.5s ;
+    transition: 0.3s ;
 }
 
 .button:hover {
-    background: #5c821c;
-    transition: 0.5s ;
+    background:#74b010;
+    transition: 0.3s ease;
 }
 
 .button:active {
@@ -1430,8 +1435,11 @@ label {
     .hero-copy {
         padding-top: 88px;
         padding-right: 48px;
-        min-width: 448px;
-        max-width: 588px
+      /*  min-width: 448px;
+        max-width: 588px;
+        */
+        /*box-shadow: 0 8px 24px rgba(6, 16, 31, 0.25);*/
+    /* mix-blend-mode: multiply; */ 
     }
 
     .hero-title {

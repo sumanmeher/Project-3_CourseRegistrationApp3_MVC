@@ -22,7 +22,7 @@
             <section class="hero">
                 <div class="container">
                     <div class="hero-inner">
-						<div class="hero-copy" style="padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 3px 3px 20px 1px #000;">
+						<div class="hero-copy" style="padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 0px 8px 24px #2f2222;">
                             <h2 class="text-center">Admin Login</h2>
 	                        
                             <br>
@@ -41,7 +41,7 @@
                                 </div>
               
                                 <div class="text-center pt-1 mb-2 pb-1">
-                                  <input type="submit" value="Login" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">                                  <!-- <a class="text-muted" href="#!">Forgot password?</a> -->
+                                  <input type="submit" value="Login" class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3">                                  <!-- <a class="text-muted" href="#!">Forgot password?</a> -->
                                 </div>
               
                                 <div class="d-flex align-items-center justify-content-center pb-4">
