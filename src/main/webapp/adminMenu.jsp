@@ -14,7 +14,7 @@
 		<a href="setUnassignedCourses">2. Add Professor</a>
 	</h3>
 	<h3>
-		<a href="addStudent.jsp">3. Add Student</a>
+		<a href="setCoursesStudent">3. Add Student</a>
 	</h3>
 	<h3>
 		<a href="showAllCourse">4. Show all Courses</a>

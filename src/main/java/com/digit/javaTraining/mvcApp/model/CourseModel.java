@@ -96,5 +96,29 @@ public class CourseModel {
 		return arrList;
 	}
 	
+	public ArrayList<ArrayList<String>> setCoursesStudent(){
+		String sql = "select C_id, C_name from course where professor_username is not null";
+		ArrayList<ArrayList<String>> arrList2 = new ArrayList<ArrayList<String>>();
+		
+		try {
+			Statement stmt = con.createStatement();
+			ResultSet res = stmt.executeQuery(sql);
+			
+			while(res.next()) {
+				String  courseId = res.getString("c_id");
+				String courseName = res.getString("c_name");
+				ArrayList<String> tempArr =new ArrayList<String>();
+				tempArr.add(courseId);
+				tempArr.add(courseName);
+				arrList2.add(tempArr);
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return arrList2;
+		
+	}
+	
 	 
 }
