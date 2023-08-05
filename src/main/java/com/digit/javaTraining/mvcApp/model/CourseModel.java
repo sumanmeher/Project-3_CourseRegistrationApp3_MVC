@@ -119,6 +119,27 @@ public class CourseModel {
 		return arrList2;
 		
 	}
-	
+	public ArrayList<ArrayList<String>> setStudent() {
+		String sql = "select * from student";
+		ArrayList<ArrayList<String>> arrList = new ArrayList<ArrayList<String>>();
+		
+		try {
+			Statement pstmt = con.createStatement();
+//			pstmt.setString(1, this.cid);
+			ResultSet result = pstmt.executeQuery(sql);
+			
+			while(result.next()) {
+				String coureName = result.getString("s_username");
+				String studentName = result.getString("s_name");
+				ArrayList<String> tempArr =new ArrayList<String>();
+				tempArr.add(coureName);
+				tempArr.add(studentName);
+				arrList.add(tempArr);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return arrList;
+	}
 	 
 }

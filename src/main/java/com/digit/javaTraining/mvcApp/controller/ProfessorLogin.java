@@ -24,7 +24,7 @@ public class ProfessorLogin extends HttpServlet{
 	    boolean isLogin = professor.login(); 
 	    if(isLogin) {
 	    	session.setAttribute("professor_username", professor.getUsername());
-	    	res.sendRedirect("professorMenu.jsp");
+	    	res.sendRedirect("setStudent");
 	    }else { 
 	    	session.setAttribute("failed_name", "Professor Login Failed");
 			session.setAttribute("failed_message", "Username and Password does not match");
