@@ -145,6 +145,10 @@ select {
     text-transform: none
 }
 
+.form-control:focus{
+	box-shadow:none;
+}
+
 button,
 html [type="button"],
 [type="reset"],
@@ -1352,7 +1356,8 @@ label {
 }
 
 .hero-copy {
-    position: relative
+    position: relative;
+    min-width: 22rem;
 }
 
 .hero-paragraph {

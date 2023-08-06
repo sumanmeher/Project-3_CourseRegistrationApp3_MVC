@@ -116,12 +116,13 @@ public class ProfessorModel {
 		return false;
 	}
 
-	public boolean addMarks() {
+	public boolean addMarks(String student_username, int marks) {
 		try {
-			StudentModel sm = new StudentModel();
+			
+			
 			PreparedStatement pstmt = con.prepareStatement("update student set s_marks = ? where s_username = ?");
-			pstmt.setInt(1, sm.grade);
-			pstmt.setString(2, sm.username);
+			pstmt.setInt(1, marks);
+			pstmt.setString(2, student_username);
 
 			int x = pstmt.executeUpdate();
 

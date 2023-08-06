@@ -18,17 +18,13 @@ public class AddMarks extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
 		HttpSession session = req.getSession();
-		String s_username = (String) session.getAttribute("s_username");
+		String s_username = req.getParameter("student");
 		int marks = Integer.parseInt(req.getParameter("marks"));
-		
-		//StudentModel sm = new StudentModel();
-		//sm.setUsername(s_username);
-		//sm.setGrade(marks);
+		System.out.println(s_username);
+		System.out.println(marks);
 
-		session = req.getSession();
 		ProfessorModel pm = new ProfessorModel();
-		
-		boolean addMarks = pm.addMarks();
+		boolean addMarks = pm.addMarks(s_username,marks);
 		if(addMarks) {
 			
 			res.sendRedirect("success.jsp");
@@ -38,7 +34,6 @@ public class AddMarks extends HttpServlet {
 			res.sendRedirect("failed.jsp");
 		}
 
-		
 	}
 
 }
