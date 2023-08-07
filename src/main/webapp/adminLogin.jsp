@@ -15,11 +15,13 @@
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
         <header class="site-header">
-            
+        <a href="welcome.jsp">
+            <img alt="" class="ml-5" src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png" style="width:60px;">
+        </a>
         </header>
 
         <main>
-            <section class="hero">
+            <section class="hero mt-3">
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy" style="padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 0px 8px 24px #2f2222;">
@@ -44,10 +46,12 @@
                                   <input type="submit" value="Login" class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3">                                  <!-- <a class="text-muted" href="#!">Forgot password?</a> -->
                                 </div>
               
+              <!--
                                 <div class="d-flex align-items-center justify-content-center pb-4">
                                   <p class="mb-0 me-2">Don't have an account? </p> &nbsp;&nbsp;
-                                  <a href="#" class="">Create new</a>
+                                  <a href="" class="">Create new</a>
                                 </div>
+                                -->
               
                               </form>
               
