@@ -22,7 +22,7 @@ public class AddCourse extends HttpServlet{
 		String duration = req.getParameter("duration");
 		String description = req.getParameter("description");
 		int price = Integer.parseInt(req.getParameter("price"));
-		
+		 
 		CourseModel course = new CourseModel();
 		course.setCid(courseId);
 		course.setName(courseName);
