@@ -141,5 +141,29 @@ public class CourseModel {
 		}
 		return arrList;
 	}
+	
+	public ArrayList<ArrayList<String>> showAllCourses() {
+		ArrayList<ArrayList<String>> arrList = new ArrayList<ArrayList<String>>();
+		String sql = "select * from course";
+		try {
+			Statement stmt = con.createStatement();
+			ResultSet result = stmt.executeQuery(sql);
+			while(result.next()) {
+				String courseId = result.getString("c_id");
+				String courseName = result.getString("c_name");
+				String duration = result.getString("duration");
+				String description = result.getString("description");
+				ArrayList<String> tempArr =new ArrayList<String>();
+				tempArr.add(courseId);
+				tempArr.add(courseName);
+				tempArr.add(duration);
+				tempArr.add(description);
+				arrList.add(tempArr);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return arrList;
+	}
 	 
 }

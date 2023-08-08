@@ -31,10 +31,12 @@ public class AddProfessor extends HttpServlet{
 		professor.setCourse_id(coourseId);
 		boolean isRegisterd = professor.register();
 		if(isRegisterd) {
+			session.setAttribute("success_name", "Proffessor Addition");
+			session.setAttribute("success_message", "Professor added Successfully!");
 			res.sendRedirect("success.jsp");
 		}else {
 			session.setAttribute("failed_name", "Professor can not be added");
-			session.setAttribute("failed_message", "something went wrong");
+			session.setAttribute("failed_message", "Something went wrong!");
 			res.sendRedirect("failed.jsp");
 		}
 	}

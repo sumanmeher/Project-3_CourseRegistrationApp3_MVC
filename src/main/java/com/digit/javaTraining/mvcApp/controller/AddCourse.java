@@ -31,10 +31,12 @@ public class AddCourse extends HttpServlet{
 		course.setPrice(price);
 		boolean isAdded = course.addCourse();
 		if(isAdded) {
+			session.setAttribute("success_name", "Course Addition");
+			session.setAttribute("success_message", "Course added Successfully!");
 			res.sendRedirect("success.jsp");
 		}else {
-			session.setAttribute("failed_name", "Admin Login Failed");
-			session.setAttribute("failed_message", "Username and Password does not match");
+			session.setAttribute("failed_name", "Course cannot be added");
+			session.setAttribute("failed_message", "Something went wrong!");
 			res.sendRedirect("failed.jsp");
 		}
 		

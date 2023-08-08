@@ -3,6 +3,9 @@ package com.digit.javaTraining.mvcApp.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 public class StudentModel {
 	public static Connection con;
@@ -129,5 +132,24 @@ public class StudentModel {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	public ArrayList<ArrayList<String>> showAllStudent() {
+		ArrayList<ArrayList<String>> arrList = new ArrayList<ArrayList<String>>();
+		String sql = "select * from student";
+		try {
+			Statement stmt = con.createStatement();
+			ResultSet result = stmt.executeQuery(sql);
+			while(result.next()) {
+				String sname = result.getString("s_name");
+				
+				ArrayList<String> tempArr =new ArrayList<String>();
+				tempArr.add(sname);
+				
+				arrList.add(tempArr);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return arrList;
 	}
 }

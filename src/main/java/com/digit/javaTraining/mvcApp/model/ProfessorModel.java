@@ -3,6 +3,9 @@ package com.digit.javaTraining.mvcApp.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 public class ProfessorModel {
 	public static Connection con;
@@ -136,5 +139,29 @@ public class ProfessorModel {
 		}
 
 		return false;
+	}
+	
+	public ArrayList<ArrayList<String>> showAllProfessor() {
+		ArrayList<ArrayList<String>> arrList = new ArrayList<ArrayList<String>>();
+		String sql = "select * from professor";
+		try {
+			Statement stmt = con.createStatement();
+			ResultSet result = stmt.executeQuery(sql);
+			while(result.next()) {
+				String pname = result.getString("p_name");
+//				String courseName = result.getString("c_name");
+//				String duration = result.getString("duration");
+//				String description = result.getString("description");
+				ArrayList<String> tempArr =new ArrayList<String>();
+				tempArr.add(pname);
+//				tempArr.add(courseName);
+//				tempArr.add(duration);
+//				tempArr.add(description);
+				arrList.add(tempArr);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return arrList;
 	}
 }

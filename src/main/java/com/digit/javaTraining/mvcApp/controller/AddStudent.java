@@ -33,10 +33,12 @@ public class AddStudent extends HttpServlet {
 		
 		boolean isRegisterd = sm.register();
 		if(isRegisterd) {
+			session.setAttribute("success_name", "Student Addition");
+			session.setAttribute("success_message", "Student added Successfully!");
 			res.sendRedirect("success.jsp");
 		}else {
 			session.setAttribute("failed_name", "Student can not be added");
-			session.setAttribute("failed_message", "something went wrong");
+			session.setAttribute("failed_message", "Something went wrong!");
 			res.sendRedirect("failed.jsp");
 		}
 	}
