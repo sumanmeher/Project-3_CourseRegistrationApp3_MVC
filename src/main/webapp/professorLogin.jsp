@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Login</title>
+    <title>Professor Login</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Playfair+Display:700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="resource/css/style.css">
@@ -16,11 +16,17 @@
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
         <header class="site-header">
-            
+            <div class="d-flex justify-content-between">
+            <a href="welcome.jsp" style="">
+            	<img alt="" class="ml-5" src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png" style="width:60px;">
+        	</a>
+        	
+        	
+        	</div>
         </header>
 
         <main>
-            <section class="hero">
+            <section class="hero mt-3">
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy" style="padding:30px !important; margin-top: -80px; border-radius: 10px;  box-shadow: 0px 8px 24px #2f2222;">

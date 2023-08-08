@@ -15,7 +15,13 @@
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
         <header class="site-header">
-            
+            <div class="d-flex justify-content-between">
+            <a href="welcome.jsp" style="">
+            	<img alt="" class="ml-5" src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png" style="width:60px;">
+        	</a>
+        	
+        	
+        	</div>
         </header>
 
         <main>

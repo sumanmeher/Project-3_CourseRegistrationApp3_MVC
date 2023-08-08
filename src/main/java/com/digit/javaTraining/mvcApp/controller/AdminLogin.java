@@ -20,6 +20,8 @@ public class AdminLogin extends HttpServlet {
 
 		// CourseApp c=new CourseApp();
 		if (username.equals("admin") && password.equals("Admin")) {
+			session.setAttribute("loginType", "admin");;
+			session.setAttribute("admin_username", "admin");
 			res.sendRedirect("adminMenu.jsp");
 		} else {
 			session.setAttribute("failed_name", "Admin Login Failed");

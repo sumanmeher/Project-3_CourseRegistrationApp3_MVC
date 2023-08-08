@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+     <%
+    session = request.getSession();
+    String successName = (String) session.getAttribute("success_name");
+    String successMessage = (String) session.getAttribute("success_message");
+    %>
+    
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -61,17 +68,27 @@
             <section class="hero">
                 <div class="container">
                     <div class="hero-inner">
-						<div class="hero-copy" style="text-align: center; padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 3px 3px 20px 1px #000;">
-                            <h2 class="text-center">Admin Login</h2>
+						<div class="hero-copy" style="text-align: center; padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 3px 3px 20px 1px #000; height:fit-content;">
+                            <h2 class="text-center">Success Page</h2>
 	                        
                             <div class="success-icon text-center">&#10004;</div>
-                            <div class="success-message">Payment Successful!</div>
-                            <div class="return-home">You will be redirected to the home page shortly.</div>
-                            <br>
+                            <div class="success-message">
+                            <%
+                            	out.println(successName);
+                            %>
+                            </div>
+                             <div class="return-home">
+                              <%
+                            	out.println(successMessage);
+                            %>
+                             </div>
+                            
+                             
+                             <br>
                             <div class="d-flex align-items-center justify-content-center pb-4">
                                 
-                                <p class="mb-0 me-2">Don't have an account? </p> &nbsp;&nbsp;
-                                <a href="#" class="">Create new</a>
+                               <!-- <p class="mb-0 me-2">Goto Home Page. </p> &nbsp;&nbsp;  --> 
+                                <a href="welcome.jsp" class="">Goto Home Page</a>
                               </div>
                             <!-- End -->
 

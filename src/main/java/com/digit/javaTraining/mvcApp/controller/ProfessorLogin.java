@@ -23,6 +23,7 @@ public class ProfessorLogin extends HttpServlet{
 	    professor.setPassword(password);
 	    boolean isLogin = professor.login(); 
 	    if(isLogin) {
+	    	session.setAttribute("loginType", "professor");
 	    	session.setAttribute("professor_username", professor.getUsername());
 	    	res.sendRedirect("setStudent");
 	    }else { 

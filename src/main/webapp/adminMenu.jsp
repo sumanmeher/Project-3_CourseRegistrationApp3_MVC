@@ -16,9 +16,15 @@
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
         <header class="site-header">
-            <a href="welcome.jsp">
-            <img alt="" class="ml-5" src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png" style="width:60px;">
-        </a>
+        	<div class="d-flex justify-content-between">
+            <a href="welcome.jsp" style="">
+            	<img alt="" class="ml-5" src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png" style="width:60px;">
+        	</a>
+        	
+        	<a href="logout" style="">
+        		<img class="mr-5" src="https://th.bing.com/th/id/R.65bc3a94db4c6f3dbcee59a207fb353e?rik=5C7HnAJqtxWSVQ&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fY%2fl%2f1%2fR%2f8%2fp%2fred-logout-hi.png&ehk=f7yPz41es5F4%2b%2f2kp7s%2bAicUA3UhCBZ6t7HLzNxwQos%3d&risl=&pid=ImgRaw&r=0" style="width:50px;">
+        	</a>
+        	</div>
         </header>
 
         <main>
@@ -29,12 +35,12 @@
 	                        <h1 class="hero-title mt-0">Admin Menu</h1>
 	                        <div class="hero-cta row" style="max-width:fit-content;">
                                 <a class="button button-shadow col col-3 mb-3" href="addCourse.jsp">Add Course</a>
-                                <a class="button button-shadow col col-3" href="setUnassignedCourses">Add Professor</a>
-                                <a class="button button-shadow col col-3" href="setCoursesStudent">Add Student</a>
+                                <a class="button button-shadow col col-3 mb-3" href="setUnassignedCourses">Add Professor</a>
+                                <a class="button button-shadow col col-3 mb-3" href="setCoursesStudent">Add Student</a>
                                 
-                                 <a class="button button-shadow col col-3" href="showAllCourse">Show all Courses</a>
-                                <a class="button button-shadow col col-3" href="showAllStudent">Show all Students</a>
-                                <a class="button button-shadow col col-3" href="showAllProfessor">Show all Professors</a>
+                                 <a class="button button-shadow col col-3 mb-3" href="showAllCourse">Show all Courses</a>
+                                <a class="button button-shadow col col-3 mb-3" href="showAllStudent">Show all Students</a>
+                                <a class="button button-shadow col col-3 mb-3" href="showAllProfessor">Show all Professors</a>
                             </div>
 						</div>
 						<div class="hero-app">

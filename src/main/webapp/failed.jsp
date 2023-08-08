@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%
+    session = request.getSession();
+    String failName = (String) session.getAttribute("failed_name");
+    String failMessage = (String) session.getAttribute("failed_message");
+    %>
+    
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -61,17 +68,26 @@
             <section class="hero">
                 <div class="container">
                     <div class="hero-inner">
-						<div class="hero-copy" style="text-align: center; padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 3px 3px 20px 1px #000;">
+						<div class="hero-copy" style="text-align: center; padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 3px 3px 20px 1px #000; height:fit-content;">
                             <h2 class="text-center">Admin Login</h2>
 	                        
                             <div class="success-icon text-center">&#10008;</div>
-                            <div class="success-message">Payment Failed!</div>
-                            <div class="return-home">You will be redirected to the home page shortly.</div>
+                            <div class="success-message">
+                            <%
+                            	out.println(failName);
+                            %>
+                            </div>
+                             <div class="return-home">
+                              <%
+                            	out.println(failMessage);
+                            %>
+                             </div>
+                           
                             <br>
                             <div class="d-flex align-items-center justify-content-center pb-4">
                                 
-                                <p class="mb-0 me-2">Don't have an account? </p> &nbsp;&nbsp;
-                                <a href="#" class="">Create new</a>
+                               <!-- <p class="mb-0 me-2">Goto Home Page. </p> &nbsp;&nbsp;  --> 
+                                <a href="welcome.jsp" class="">Goto Home Page</a>
                               </div>
                             <!-- End -->
 

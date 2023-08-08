@@ -23,7 +23,7 @@ public class StudentLogin extends HttpServlet{
 	    student.setPassword(password);
 	    boolean isLogin = student.login(); 
 	    if(isLogin) {
-	    	System.out.println(username);
+	    	session.setAttribute("loginType", "student");
 	    	session.setAttribute("student_username", student.getUsername());
 	    	session.setAttribute("s_marks", student.getGrade());
 	    	res.sendRedirect("studentMenu.jsp");

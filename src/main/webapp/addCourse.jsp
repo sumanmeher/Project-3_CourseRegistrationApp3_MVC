@@ -30,10 +30,20 @@ button, input, select, textarea, label {
 </head>
 <body class="is-boxed has-animations">
 	<div class="body-wrap boxed-container">
-		<header class="site-header"> </header>
+		<header class="site-header">
+		<div class="d-flex justify-content-between">
+            <a href="welcome.jsp" style="">
+            	<img alt="" class="ml-5" src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png" style="width:60px;">
+        	</a>
+        	
+        	<a href="logout" style="">
+        		<img class="mr-5" src="https://th.bing.com/th/id/R.65bc3a94db4c6f3dbcee59a207fb353e?rik=5C7HnAJqtxWSVQ&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fY%2fl%2f1%2fR%2f8%2fp%2fred-logout-hi.png&ehk=f7yPz41es5F4%2b%2f2kp7s%2bAicUA3UhCBZ6t7HLzNxwQos%3d&risl=&pid=ImgRaw&r=0" style="width:50px;">
+        	</a>
+        	</div>
+		</header>
 
 		<main>
-			<section class="hero">
+			<section class="hero mt-3">
 				<div class="container">
 					<div class="hero-inner">
 						<div class="hero-copy"
@@ -66,11 +76,7 @@ button, input, select, textarea, label {
   <div class="text-center pt-1 mb-2 pb-1">
     <input type="submit" value="Submit" class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3">
   </div>
-  <div
-    class="d-flex align-items-center justify-content-center pb-4">
-    <p class="mb-0 me-2">Don't have an account?</p>
-    &nbsp;&nbsp; <a href="#" class="">Create new</a>
-  </div>
+
 </form>
 							
 

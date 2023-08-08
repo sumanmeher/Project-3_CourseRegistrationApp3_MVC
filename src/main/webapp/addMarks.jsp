@@ -10,16 +10,16 @@
 </head>
 <body>
 	<%
-		session = request.getSession();
-		ArrayList<ArrayList<String>> arrList = (ArrayList)session.getAttribute("setStudent");
+		//session = request.getSession();
+		//ArrayList<ArrayList<String>> arrList = (ArrayList)session.getAttribute("setStudent");
 	%>
 	<form action="addMarks">
 	
 	<select name="student">
 		<% 
-		for(int i=0; i<arrList.size();i++){
-			out.println("<option value="+arrList.get(i).get(0)+">"+arrList.get(i).get(1)+"</option>");
-		}
+		//for(int i=0; i<arrList.size();i++){
+			//out.println("<option value="+arrList.get(i).get(0)+">"+arrList.get(i).get(1)+"</option>");
+		//}
 		%>
 		
 		
@@ -34,6 +34,11 @@
 
 -->
 
+<%
+		session = request.getSession();
+		ArrayList<ArrayList<String>> arrList = (ArrayList)session.getAttribute("setStudent");
+	%>
+	
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -49,39 +54,47 @@
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
         <header class="site-header">
-            
+            <div class="d-flex justify-content-between">
+            <a href="welcome.jsp" style="">
+            	<img alt="" class="ml-5" src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png" style="width:60px;">
+        	</a>
+        	
+        	<a href="logout" style="">
+        		<img class="mr-5" src="https://th.bing.com/th/id/R.65bc3a94db4c6f3dbcee59a207fb353e?rik=5C7HnAJqtxWSVQ&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fY%2fl%2f1%2fR%2f8%2fp%2fred-logout-hi.png&ehk=f7yPz41es5F4%2b%2f2kp7s%2bAicUA3UhCBZ6t7HLzNxwQos%3d&risl=&pid=ImgRaw&r=0" style="width:50px;">
+        	</a>
+        	</div>
         </header>
 
         <main>
-            <section class="hero">
+            <section class="hero mt-3">
                 <div class="container">
                     <div class="hero-inner">
-						<div class="hero-copy" style="padding:30px !important; margin-top: -80px; border-radius: 10px;  box-shadow: 0px 8px 24px #2f2222;">
-                            <h2 class="text-center">Professor Login</h2>
+						<div class="hero-copy" style="padding:30px !important; margin-top: -80px; border-radius: 10px;  box-shadow: 0px 8px 24px #2f2222; height:fit-content;">
+                            <h2 class="text-center">Give Marks.</h2>
 	                        
                             <br>
-                            <form action="professorLogin" method="post">
+                            <form action="addMarks" method="post">
               
                                 <div class="form-outline mb-4">
-                                    <!-- <label class="form-label" for="form2Example11">Username</label> -->
-                                  <input type="text" class="form-control" name="username" placeholder="Enter Username" />
-                                  
+                                  <select name="student" class="form-control">
+									<% 
+									for(int i=0; i<arrList.size();i++){
+										out.println("<option value="+arrList.get(i).get(0)+">"+arrList.get(i).get(1)+"</option>");
+									}
+									%>
+								</select> 
                                 </div>
               
                                 <div class="form-outline mb-4">
                                     <!-- <label class="form-label" for="form2Example22">Password</label> -->
-                                  <input type="password" class="form-control" name="password" placeholder="Enter Password"/>
+                                  <input type="type" class="form-control" name="marks" placeholder="Enter Marks"/>
                                   
                                 </div>
-              
-                                <div class="text-center pt-1 mb-2 pb-1">
-                                  <input type="submit" value="Login" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">                                  <!-- <a class="text-muted" href="#!">Forgot password?</a> -->
+              					
+              					<div class="text-center pt-1 mb-2 pb-1">
+                                  <input type="submit" value="Submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">                                  <!-- <a class="text-muted" href="#!">Forgot password?</a> -->
                                 </div>
-              
-                                <div class="d-flex align-items-center justify-content-center pb-4">
-                                  <p class="mb-0 me-2">Don't have an account? </p> &nbsp;&nbsp;
-                                  <a href="#" class="">Create new</a>
-                                </div>
+                                
               
                               </form>
               
