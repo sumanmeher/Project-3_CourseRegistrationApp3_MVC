@@ -28,7 +28,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>All Course</title>
+<title>All Courses</title>
 </head>
 <body>
 	

@@ -31,15 +31,15 @@ button, input, select, textarea, label {
 <body class="is-boxed has-animations">
 	<div class="body-wrap boxed-container">
 		<header class="site-header">
-		<div class="d-flex justify-content-between">
-            <a href="welcome.jsp" style="">
-            	<img alt="" class="ml-5" src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png" style="width:60px;">
-        	</a>
-        	
-        	<a href="logout" style="">
-        		<img class="mr-5" src="https://th.bing.com/th/id/R.65bc3a94db4c6f3dbcee59a207fb353e?rik=5C7HnAJqtxWSVQ&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fY%2fl%2f1%2fR%2f8%2fp%2fred-logout-hi.png&ehk=f7yPz41es5F4%2b%2f2kp7s%2bAicUA3UhCBZ6t7HLzNxwQos%3d&risl=&pid=ImgRaw&r=0" style="width:50px;">
-        	</a>
-        	</div>
+			<div class="d-flex justify-content-between">
+				<a href="welcome.jsp" style=""> <img alt="" class="ml-5"
+					src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png"
+					style="width: 60px;">
+				</a> <a href="logout" style=""> <img class="mr-5"
+					src="https://th.bing.com/th/id/R.65bc3a94db4c6f3dbcee59a207fb353e?rik=5C7HnAJqtxWSVQ&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fY%2fl%2f1%2fR%2f8%2fp%2fred-logout-hi.png&ehk=f7yPz41es5F4%2b%2f2kp7s%2bAicUA3UhCBZ6t7HLzNxwQos%3d&risl=&pid=ImgRaw&r=0"
+					style="width: 50px;">
+				</a>
+			</div>
 		</header>
 
 		<main>
@@ -53,32 +53,38 @@ button, input, select, textarea, label {
 							<br>
 
 							<form action="addCourse" method="post">
-  <div class="form-outline mb-4">
-    <label class="form-label" for="course_id">Course ID:</label>
-    <input type="text" class="form-control" name="course_id" id="course_id" placeholder="Course ID" />
-  </div>
-  <div class="form-outline mb-4">
-    <label class="form-label" for="course_name">Course Name:</label>
-    <input type="text" class="form-control" name="course_name" id="course_name" placeholder="Course Name" />
-  </div>
-  <div class="form-outline mb-4">
-    <label class="form-label" for="duration">Duration:</label>
-    <input type="text" class="form-control" name="duration" id="duration" placeholder="Duration" />
-  </div>
-  <div class="form-outline mb-4">
-    <label class="form-label" for="description">Description:</label>
-    <textarea class="form-control" name="description" id="description" placeholder="Description"></textarea>
-  </div>
-  <div class="form-outline mb-4">
-    <label class="form-label" for="price">Price:</label>
-    <input type="number" class="form-control" name="price" id="price" placeholder="Price" />
-  </div>
-  <div class="text-center pt-1 mb-2 pb-1">
-    <input type="submit" value="Submit" class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3">
-  </div>
+								<div class="form-outline mb-4">
+									<label class="form-label" for="course_id">Course ID:</label> <input
+										type="text" class="form-control" name="course_id"
+										id="course_id" placeholder="Course ID" />
+								</div>
+								<div class="form-outline mb-4">
+									<label class="form-label" for="course_name">Course
+										Name:</label> <input type="text" class="form-control"
+										name="course_name" id="course_name" placeholder="Course Name" />
+								</div>
+								<div class="form-outline mb-4">
+									<label class="form-label" for="duration">Duration:</label> <input
+										type="text" class="form-control" name="duration" id="duration"
+										placeholder="Duration" />
+								</div>
+								<div class="form-outline mb-4">
+									<label class="form-label" for="description">Description:</label>
+									<textarea class="form-control" name="description"
+										id="description" placeholder="Description"></textarea>
+								</div>
+								<div class="form-outline mb-4">
+									<label class="form-label" for="price">Price:</label> <input
+										type="number" class="form-control" name="price" id="price"
+										placeholder="Price" />
+								</div>
+								<div class="text-center pt-1 mb-2 pb-1">
+									<input type="submit" value="Submit"
+										class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3">
+								</div>
 
-</form>
-							
+							</form>
+
 
 
 						</div>
@@ -99,27 +105,11 @@ button, input, select, textarea, label {
 		<footer class="site-footer">
 			<div class="container">
 				<div class="site-footer-inner has-top-divider">
-					<div class="brand footer-brand"></div>
-					<ul class="footer-links list-reset">
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">FAQ's</a></li>
-						<li><a href="#">Support</a></li>
-					</ul>
-					<ul class="footer-social-links list-reset">
-						<li><a href="#"> <span class="screen-reader-text">Facebook</span>
 
-						</a></li>
-						<li><a href="#"> <span class="screen-reader-text">Twitter</span>
-
-						</a></li>
-						<li><a href="#"> <span class="screen-reader-text">Google</span>
-
-						</a></li>
-					</ul>
-					<div class="footer-copyright">&copy; 2018 Laurel, all rights
-						reserved</div>
+					<div class="footer-copyright">&copy; Course Management
+						Application. All rights reserved. Digit Insurance</div>
 				</div>
+
 			</div>
 		</footer>
 	</div>

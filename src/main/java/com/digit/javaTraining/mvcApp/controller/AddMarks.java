@@ -33,6 +33,7 @@ public class AddMarks extends HttpServlet {
 			session.setAttribute("failed_name", "Student marks can not be added");
 			session.setAttribute("failed_message", "Something went wrong!");
 			res.sendRedirect("failed.jsp");
+			
 		}
 
 	}
