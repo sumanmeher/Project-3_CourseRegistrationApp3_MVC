@@ -8,52 +8,9 @@
 	
 	session = request.getSession();
 	ArrayList<ArrayList> userList = (ArrayList) session.getAttribute("allCourses");
-	
-	
-	//Iterator itr = userList.iterator();
 
-	//while (itr.hasNext()) {
-	
-		/*for(int i=0; i<userList.size(); i++){
-		//CourseModel course  = (CourseModel)itr.next();
-		ArrayList<String> course = userList.get(i);
-		out.println("Course Name: " + course.get(1) + "<BR>" + 
-		"Course Duration: "+ course.get(2) + "<BR>" + 
-		"Course Description: " + course.get(3)+"<BR> <BR>");
-	}
-		*/
 	%>
-	<!-- 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>All Courses</title>
-</head>
-<body>
 	
-	/*
-	session = request.getSession();
-	ArrayList<ArrayList> userList = (ArrayList) session.getAttribute("allCourses");
-	
-	*/
-	//Iterator itr = userList.iterator();
-
-	//while (itr.hasNext()) {
-	
-		/*for(int i=0; i<userList.size(); i++){
-		//CourseModel course  = (CourseModel)itr.next();
-		ArrayList<String> course = userList.get(i);
-		out.println("Course Name: " + course.get(1) + "<BR>" + 
-		"Course Duration: "+ course.get(2) + "<BR>" + 
-		"Course Description: " + course.get(3)+"<BR> <BR>");
-	}
-		*/
-	
-
-</body>
-</html>
- -->
  
 
 <!DOCTYPE html>
@@ -76,24 +33,63 @@
 </head>
 <body class="is-boxed has-animations">
 	<div class="body-wrap boxed-container">
-		<header class="site-header"> </header>
+		<header class="site-header">
+		<div class="d-flex justify-content-between">
+				<a href="welcome.jsp" style=""> <img alt="" class="ml-5"
+					src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png"
+					style="width: 60px;">
+				</a> <a href="logout" style=""> <img class="mr-5"
+					src="https://th.bing.com/th/id/R.65bc3a94db4c6f3dbcee59a207fb353e?rik=5C7HnAJqtxWSVQ&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fY%2fl%2f1%2fR%2f8%2fp%2fred-logout-hi.png&ehk=f7yPz41es5F4%2b%2f2kp7s%2bAicUA3UhCBZ6t7HLzNxwQos%3d&risl=&pid=ImgRaw&r=0"
+					style="width: 50px;">
+				</a>
+			</div>
+		</header>
 
 		<main>
-			<section class="hero">
+			<section class="hero" >
 				<div class="container">
 					<div class="hero-inner">
-						<div class="hero-copy">
-							<h1 class="hero-title mt-0">Welcome to our Course Management
-								Website.</h1>
-							<%
+						<div class="hero-copy" style="padding-top:0px;">
+							<h1 class="hero-title mt-0">All Courses</h1>
+								
+								
+                    <table class="table table-hover">
+                        <!--Table head-->
+                        <thead class="mdb-color darken-3">
+                            <tr class="text-white">
+                                <th>S.N</th>
+                                <th>Course Name</th>
+                                <th>Duration</th>
+                                <th>Description</th>
+                                
+                            </tr>
+                        </thead>
+                        <!--Table head-->
+                        <!--Table body-->
+                        <tbody>
+                        
+                        <%
 							for(int i=0; i<userList.size(); i++){
 							//CourseModel course  = (CourseModel)itr.next();
 							ArrayList<String> course = userList.get(i);
-							out.println("Course Name: " + course.get(1) + "<BR>" + 
-							"Course Duration: "+ course.get(2) + "<BR>" + 
-							"Course Description: " + course.get(3)+"<BR> <BR>");
+							out.println("<tr>");
+							out.println("<th scope='row'>"+(i+1)+"</th>");
+							out.println("<td>" + course.get(1) + "</td>" + 
+							"<td>"+ course.get(2) + "</td>" + 
+							"<td>" + course.get(3)+"</td>");
 						}
 							%>
+                            
+                                
+                               
+                           
+                        </tbody>
+                        <!--Table body-->
+                    </table>
+                    <!--Table-->
+
+								
+							
 						</div>
 						<div class="hero-app">
 							<div class="hero-app-illustration"></div>
