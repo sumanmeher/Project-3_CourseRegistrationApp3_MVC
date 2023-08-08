@@ -116,7 +116,7 @@ button, input, select, textarea, label {
 						<div class="hero-app">
 							<div class="hero-app-illustration"></div>
 							<img class="device-mockup"
-								src="https://www.adazing.com/wp-content/uploads/2019/02/stacked-book-clipart-07.png"
+								src="https://th.bing.com/th/id/R.a7c0d9b4a6f68b154d28ac4d1a0690cb?rik=4rtr6urTkti5Fg&riu=http%3a%2f%2fclipground.com%2fimages%2ffemale-college-student-clipart-17.png&ehk=uS76dY74tTlZCX0pvLvm3H3nJZc9byBadES%2bchLEzxk%3d&risl=&pid=ImgRaw&r=0"
 								alt="App preview">
 
 
