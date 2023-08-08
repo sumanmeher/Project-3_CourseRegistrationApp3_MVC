@@ -31,7 +31,7 @@ public class AddCourse extends HttpServlet{
 		course.setPrice(price);
 		boolean isAdded = course.addCourse();
 		if(isAdded) {
-			session.setAttribute("success_name", "Course Addition");
+			session.setAttribute("success_name", "Course Added");
 			session.setAttribute("success_message", "Course added Successfully!");
 			res.sendRedirect("success.jsp");
 		}else {

@@ -26,8 +26,8 @@ public class SetStudent extends HttpServlet{
 			session.setAttribute("setStudent", arrList);
 			res.sendRedirect("addMarks.jsp");
 		}else {
-			session.setAttribute("failed_name", "Professor is not there for now.");
-			session.setAttribute("failed_message", "No Student is Available.");
+			session.setAttribute("failed_name", "Student unavailable");
+			session.setAttribute("failed_message", "No Student found.");
 			res.sendRedirect("failed.jsp");
 		}
 	}

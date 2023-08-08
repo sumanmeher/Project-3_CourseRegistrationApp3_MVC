@@ -26,7 +26,7 @@ public class AddMarks extends HttpServlet {
 		ProfessorModel pm = new ProfessorModel();
 		boolean addMarks = pm.addMarks(s_username,marks);
 		if(addMarks) {
-			session.setAttribute("success_name", "Marks Addition");
+			session.setAttribute("success_name", "Marks Added");
 			session.setAttribute("success_message", "Marks added Successfully!");
 			res.sendRedirect("success.jsp");
 		}else {
