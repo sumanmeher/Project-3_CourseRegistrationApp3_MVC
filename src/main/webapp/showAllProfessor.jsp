@@ -1,18 +1,18 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+	<%
+session = request.getSession();
+String loginType = (String) session.getAttribute("loginType");
+if(loginType!="admin"){
+	response.sendRedirect("welcome.jsp");
+}
+%>
 
 	<%
 	session = request.getSession();
 	ArrayList<ArrayList> userList = (ArrayList) session.getAttribute("allProfessor");
-	//Iterator itr = userList.iterator();
-
-	//while (itr.hasNext()) {
-	/*for (int i = 0; i < userList.size(); i++) {
-		//CourseModel course  = (CourseModel)itr.next();
-		ArrayList<String> prof = userList.get(i);
-		out.println("Professor Name: " + prof.get(0) + "<BR> <BR>");
-	}*/
 	%>
 
 
@@ -72,6 +72,7 @@
                         <tbody>
                         
                         <%
+                        if(userList!=null)
 							for(int i=0; i<userList.size(); i++){
 							//CourseModel course  = (CourseModel)itr.next();
 							ArrayList<String> course = userList.get(i);

@@ -1,38 +1,20 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+	 <%
+session = request.getSession();
+String loginType = (String) session.getAttribute("loginType");
+
+if(loginType!="admin"){
+	response.sendRedirect("welcome.jsp");
+}
+%>
+	
 <%
 session = request.getSession();
 ArrayList<ArrayList<String>> arrList = (ArrayList) session.getAttribute("set_courses");
 %>
-<!-- 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Add Student</title>
-</head>
-<body>
-	
-
-	<form action="addStudent">
-		<label>Name</label><br> <input type="text" name="name"><br>
-		<label>Username</label><br> <input type="text" name="username"><br>
-		<label>Password</label><br> <input type="text" name="password"><br>
-		<label>Age</label><br> <input type="text" name="age"><br>
-		<select name="course">
-	//for (int i = 0; i < arrList.size(); i++) {
-//out.println("<option value=" + arrList.get(i).get(0) + ">" + arrList.get(i).get(1) + "</option>");
-//}
-			%>
-			
-		</select> <br> 
-		<input type="submit">
-	</form>
-
-
-</body>
-</html>-->
 
 <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -116,7 +98,8 @@ button, input, select, textarea, label {
 										class="form-control" name="course"> 
 										
 										<%
-										for (int i = 0; i< arrList.size(); i++) { 
+										if(arrList!=null)
+										for (int i = 0; i<arrList.size(); i++) { 
 											out.println("<option value=" + arrList.get(i).get(0) + ">" +arrList.get(i).get(1) + "</option>"); 
 											} 
 										%>

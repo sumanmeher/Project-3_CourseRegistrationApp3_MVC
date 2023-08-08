@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
+<%
+session = request.getSession();
+String loginType = (String) session.getAttribute("loginType");
+if(loginType!="admin"){
+	response.sendRedirect("welcome.jsp");
+}
+%>
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>

@@ -1,7 +1,14 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
- 
+ <%
+session = request.getSession();
+String loginType = (String) session.getAttribute("loginType");
+
+if(loginType!="admin"){
+	response.sendRedirect("welcome.jsp");
+}
+%>
 <!DOCTYPE html> 
 <html lang="en" class="no-js">
 <head>
@@ -80,6 +87,7 @@ button, input, select, textarea, label {
     <label class="form-label" for="course">Course:</label>
     <select class="form-control" name="course">
       <% 
+      if(arrList!=null)
 		for(int i=0; i<arrList.size();i++){
 			out.println("<option value="+arrList.get(i).get(0)+">"+arrList.get(i).get(1)+"</option>");
 		}
