@@ -69,13 +69,12 @@ button, input, select, textarea, label {
 		<header class="site-header">
 
 			<div class="d-flex justify-content-between">
-				<a href="welcome.jsp" style=""> <img alt="" class="ml-5"
-					src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png"
-					style="width: 60px;">
-				</a> <a href="logout" style=""> <img class="mr-5"
-					src="https://th.bing.com/th/id/R.65bc3a94db4c6f3dbcee59a207fb353e?rik=5C7HnAJqtxWSVQ&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fY%2fl%2f1%2fR%2f8%2fp%2fred-logout-hi.png&ehk=f7yPz41es5F4%2b%2f2kp7s%2bAicUA3UhCBZ6t7HLzNxwQos%3d&risl=&pid=ImgRaw&r=0"
-					style="width: 50px;">
-				</a>
+				<a href="welcome.jsp" style=""> <img alt="" class="ml-5" src="https://www.pinclipart.com/picdir/big/178-1785162_white-home-icon-png-vector-royalty-free-download.png" style="width:40px;">
+				<a href="logout" class="mr-3" style="color:red; font-weight:700;">
+        	<img class="" src="https://themayanagari.com/wp-content/uploads/2021/04/Exit-button-Transparent-1.png" style="width:40px; margin-left:11px;">
+        	<div>Logout</div>
+        		
+        	</a>
 			</div>
 
 		</header>

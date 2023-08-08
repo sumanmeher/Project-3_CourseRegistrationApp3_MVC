@@ -16,7 +16,7 @@
     <div class="body-wrap boxed-container">
         <header class="site-header">
         <a href="welcome.jsp">
-            <img alt="" class="ml-5" src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png" style="width:60px;">
+            <img alt="" class="ml-5" src="https://www.pinclipart.com/picdir/big/178-1785162_white-home-icon-png-vector-royalty-free-download.png" style="width:40px;">
         </a>
         </header>
 
