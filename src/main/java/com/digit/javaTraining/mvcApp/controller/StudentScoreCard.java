@@ -19,7 +19,7 @@ public class StudentScoreCard extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		String s_username = (String) session.getAttribute("student_username");
-		System.out.println(s_username);
+		
 		
 		session = req.getSession();
 

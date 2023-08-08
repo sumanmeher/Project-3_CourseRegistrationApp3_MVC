@@ -57,11 +57,19 @@
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
         <header class="site-header">
-            
+            <div class="d-flex justify-content-between">
+				<a href="welcome.jsp" style=""> <img alt="" class="ml-5"
+					src="https://sashabarab.org/wp-content/uploads/2015/02/course-icon.png"
+					style="width: 60px;">
+				</a> <a href="logout" style=""> <img class="mr-5"
+					src="https://th.bing.com/th/id/R.65bc3a94db4c6f3dbcee59a207fb353e?rik=5C7HnAJqtxWSVQ&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fY%2fl%2f1%2fR%2f8%2fp%2fred-logout-hi.png&ehk=f7yPz41es5F4%2b%2f2kp7s%2bAicUA3UhCBZ6t7HLzNxwQos%3d&risl=&pid=ImgRaw&r=0"
+					style="width: 50px;">
+				</a>
+			</div>
         </header>
 
         <main>
-            <section class="hero">
+            <section class="hero mt-5">
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy" style="text-align: center; padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 3px 3px 20px 1px #000; height:fit-content;">

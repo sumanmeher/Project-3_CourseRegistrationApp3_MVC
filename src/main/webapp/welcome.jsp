@@ -53,9 +53,11 @@ try {
 						<div class="hero-copy">
 							<h1 class="hero-title mt-0">Welcome to our Course Management
 								Website.</h1>
-							<p class="hero-paragraph">Our landing page template works on
-								all devices, so you only have to set it up once, and get
-								beautiful results forever.</p>
+							<p class="hero-paragraph">
+							Our course management website is the perfect solution for instructors and students 
+							who want to streamline their learning experience. 
+							
+							</p>
 							<div class="hero-cta">
 								<a class="button button-shadow" href="adminLogin.jsp">Admin
 									Login</a> <a class="button button-shadow" href="professorLogin.jsp">Professor

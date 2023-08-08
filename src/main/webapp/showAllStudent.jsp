@@ -51,7 +51,7 @@
 				<div class="container">
 					<div class="hero-inner">
 						<div class="hero-copy" style="padding-top:0px;">
-							<h1 class="hero-title mt-0">All Courses</h1>
+							<h1 class="hero-title mt-0">All Students</h1>
 								
 								
                     <table class="table table-hover">
