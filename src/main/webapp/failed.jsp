@@ -69,7 +69,7 @@
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy" style="text-align: center; padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 3px 3px 20px 1px #000; height:fit-content;">
-                            <h2 class="text-center">Admin Login</h2>
+                            <h2 class="text-center">Failed Page</h2>
 	                        
                             <div class="success-icon text-center">&#10008;</div>
                             <div class="success-message">

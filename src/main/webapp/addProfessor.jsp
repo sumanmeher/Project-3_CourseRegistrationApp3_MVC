@@ -70,7 +70,7 @@ button, input, select, textarea, label {
   </div>
   <div class="form-outline mb-4">
     <label class="form-label" for="password">Password:</label>
-    <input type="text" class="form-control" name="password" placeholder="Password" />
+    <input type="password" class="form-control" name="password" placeholder="Password" />
   </div>
   <div class="form-outline mb-4">
     <label class="form-label" for="age">Age:</label>
