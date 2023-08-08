@@ -135,15 +135,20 @@ public class StudentModel {
 	}
 	public ArrayList<ArrayList<String>> showAllStudent() {
 		ArrayList<ArrayList<String>> arrList = new ArrayList<ArrayList<String>>();
-		String sql = "select * from student";
+		String sql = "select s.s_name as s_name, c.c_name as c_name, p.p_name as p_name from student s join course c on s.course_id = c.c_id join professor p on p.p_username=c.professor_username";
 		try {
 			Statement stmt = con.createStatement();
 			ResultSet result = stmt.executeQuery(sql);
 			while(result.next()) {
 				String sname = result.getString("s_name");
+				String cName = result.getString("c_name");
+				String pName = result.getString("p_name");
+				
 				
 				ArrayList<String> tempArr =new ArrayList<String>();
 				tempArr.add(sname);
+				tempArr.add(cName);
+				tempArr.add(pName);
 				
 				arrList.add(tempArr);
 			}

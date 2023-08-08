@@ -68,6 +68,7 @@ if(loginType!="admin"){
                                 <th>Course Name</th>
                                 <th>Duration</th>
                                 <th>Description</th>
+                                <th>Professor Name</th>
                                 
                             </tr>
                         </thead>
@@ -81,9 +82,11 @@ if(loginType!="admin"){
 							ArrayList<String> course = userList.get(i);
 							out.println("<tr>");
 							out.println("<th scope='row'>"+(i+1)+"</th>");
-							out.println("<td>" + course.get(1) + "</td>" + 
-							"<td>"+ course.get(2) + "</td>" + 
-							"<td>" + course.get(3)+"</td>");
+							out.println("<td>" + course.get(1) + "</td>");  
+							out.println("<td>"+ course.get(2) + "</td>"); 
+							out.println("<td>" + course.get(3)+"</td>");
+							out.println("<td>"+course.get(4)+"</td>");
+							out.println("</tr>");
 						}
 							%>
                             

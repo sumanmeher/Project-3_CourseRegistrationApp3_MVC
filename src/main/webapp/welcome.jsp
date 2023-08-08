@@ -6,20 +6,25 @@ session = request.getSession();
 String loginType = "";
 try {
 	loginType = (String) session.getAttribute("loginType");
-	switch (loginType) {
-	case "admin":
-		response.sendRedirect("adminMenu.jsp");
-		break;
-	case "student":
-		response.sendRedirect("studentMenu.jsp");
-		break;
-	case "professor":
-		response.sendRedirect("setStudent");
-		break;
-	default:
+	if (loginType != null) {
+		switch (loginType) {
+		case "admin":
+			response.sendRedirect("adminMenu.jsp");
+			break;
+		case "student":
+			response.sendRedirect("studentMenu.jsp");
+			break;
+		case "professor":
+			response.sendRedirect("setStudent");
+			break;
+		default:
+			session.invalidate();
+		}
+	} else {
 		session.invalidate();
 	}
 } catch (Exception e) {
+	session.invalidate();
 	e.printStackTrace();
 }
 %>
@@ -53,11 +58,9 @@ try {
 						<div class="hero-copy">
 							<h1 class="hero-title mt-0">Welcome to our Course Management
 								Website.</h1>
-							<p class="hero-paragraph">
-							Our course management website is the perfect solution for instructors and students 
-							who want to streamline their learning experience. 
-							
-							</p>
+							<p class="hero-paragraph">Our course management website is
+								the perfect solution for instructors and students who want to
+								streamline their learning experience.</p>
 							<div class="hero-cta">
 								<a class="button button-shadow" href="adminLogin.jsp">Admin
 									Login</a> <a class="button button-shadow" href="professorLogin.jsp">Professor
@@ -82,8 +85,9 @@ try {
 		<footer class="site-footer">
 			<div class="container">
 				<div class="site-footer-inner has-top-divider">
-					
-					<div class="footer-copyright">&copy; Course Management Application. All rights reserved. Digit Insurance</div>
+
+					<div class="footer-copyright">&copy; Course Management
+						Application. All rights reserved. Digit Insurance</div>
 				</div>
 			</div>
 		</footer>

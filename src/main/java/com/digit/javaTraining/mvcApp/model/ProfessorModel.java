@@ -143,18 +143,18 @@ public class ProfessorModel {
 	
 	public ArrayList<ArrayList<String>> showAllProfessor() {
 		ArrayList<ArrayList<String>> arrList = new ArrayList<ArrayList<String>>();
-		String sql = "select * from professor";
+		String sql = "select p.p_name as p_name, c.c_name as c_name from professor p left join course c on p.course_id=c.c_id";
 		try {
 			Statement stmt = con.createStatement();
 			ResultSet result = stmt.executeQuery(sql);
 			while(result.next()) {
 				String pname = result.getString("p_name");
-//				String courseName = result.getString("c_name");
-//				String duration = result.getString("duration");
-//				String description = result.getString("description");
+				String cName = result.getString("c_name");
+				
 				ArrayList<String> tempArr =new ArrayList<String>();
 				tempArr.add(pname);
-//				tempArr.add(courseName);
+				tempArr.add(cName);
+				//				tempArr.add(courseName);
 //				tempArr.add(duration);
 //				tempArr.add(description);
 				arrList.add(tempArr);

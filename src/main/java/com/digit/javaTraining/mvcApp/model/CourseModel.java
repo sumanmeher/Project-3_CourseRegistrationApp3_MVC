@@ -144,7 +144,7 @@ public class CourseModel {
 	
 	public ArrayList<ArrayList<String>> showAllCourses() {
 		ArrayList<ArrayList<String>> arrList = new ArrayList<ArrayList<String>>();
-		String sql = "select * from course";
+		String sql = "select c.c_id as c_id, c.c_name as c_name, c.duration as duration, c.description as description, p.p_name as p_name from course c join professor p on c.c_id=p.course_id";
 		try {
 			Statement stmt = con.createStatement();
 			ResultSet result = stmt.executeQuery(sql);
@@ -153,12 +153,16 @@ public class CourseModel {
 				String courseName = result.getString("c_name");
 				String duration = result.getString("duration");
 				String description = result.getString("description");
+				String professorName = result.getString("p_name");
+				
 				ArrayList<String> tempArr =new ArrayList<String>();
 				tempArr.add(courseId);
 				tempArr.add(courseName);
 				tempArr.add(duration);
 				tempArr.add(description);
+				tempArr.add(professorName);
 				arrList.add(tempArr);
+			
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

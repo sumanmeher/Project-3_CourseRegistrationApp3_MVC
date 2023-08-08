@@ -11,7 +11,6 @@ if(loginType!="admin"){
 %>
 
 	<%
-	session = request.getSession();
 	ArrayList<ArrayList> userList = (ArrayList) session.getAttribute("allProfessor");
 	%>
 
@@ -62,6 +61,7 @@ if(loginType!="admin"){
                             <tr class="text-white">
                                 <th>S.N</th>
                                 <th>Professor Name</th>
+                                <th>Course Teaching</th>
                                 
                                 
                             </tr>
@@ -77,8 +77,9 @@ if(loginType!="admin"){
 							ArrayList<String> course = userList.get(i);
 							out.println("<tr>");
 							out.println("<th scope='row'>"+(i+1)+"</th>");
-							out.println("<td>" + course.get(0) + "</td>" 
-							);
+							out.println("<td>" + course.get(0) + "</td>");
+							out.println("<td>"+course.get(1)+"</td>");
+							out.println("</tr>");
 						}
 							%>
                             
