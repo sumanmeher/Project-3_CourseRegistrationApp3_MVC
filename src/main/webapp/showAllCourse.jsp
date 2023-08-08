@@ -86,7 +86,7 @@
 							<h1 class="hero-title mt-0">Welcome to our Course Management
 								Website.</h1>
 							<%
-							/*for(int i=0; i<userList.size(); i++){
+							for(int i=0; i<userList.size(); i++){
 							//CourseModel course  = (CourseModel)itr.next();
 							ArrayList<String> course = userList.get(i);
 							out.println("Course Name: " + course.get(1) + "<BR>" + 
