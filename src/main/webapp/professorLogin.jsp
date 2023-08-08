@@ -48,13 +48,10 @@
                                 </div>
               
                                 <div class="text-center pt-1 mb-2 pb-1">
-                                  <input type="submit" value="Login" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">                                  <!-- <a class="text-muted" href="#!">Forgot password?</a> -->
+                                  <input type="submit" value="Login" class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3">                                  <!-- <a class="text-muted" href="#!">Forgot password?</a> -->
                                 </div>
               
-                                <div class="d-flex align-items-center justify-content-center pb-4">
-                                  <p class="mb-0 me-2">Don't have an account? </p> &nbsp;&nbsp;
-                                  <a href="#" class="">Create new</a>
-                                </div>
+                                
               
                               </form>
               
