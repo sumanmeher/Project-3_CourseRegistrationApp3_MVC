@@ -8,7 +8,7 @@ public class DatabaseModel {
 	public DatabaseModel() {
 		String url = "jdbc:mysql://localhost:3306/crs";
 		String user = "root";
-		String pwd = "admin@12345";
+		String pwd = "Dhoni$1234";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection(url, user, pwd);
