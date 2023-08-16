@@ -266,6 +266,29 @@ try {
 .login-btn:hover{
 background:#3c570d
 }
+.card {
+    background: transparent;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    border: 0;
+    border-radius: 1rem;
+}
+
+.card-img-top{
+	background:#3b3d55bf;
+	padding:0px;
+}
+
+.card-body{
+	padding:1rem !important;
+}
+
+.card-title{
+	margin:0px;
+	    height: fit-content !important;
+	    margin-bottom:10px;
+}
+
 </style>
 
 <script
@@ -275,7 +298,7 @@ background:#3c570d
 	<div class="body-wrap boxed-container">
 		<header class="site-header"> 
 			<div class="mr-3" style="display:flex; justify-content:end;">
-				<a class="button button-shadow login-btn" href="welcome.jsp">Login</a>
+				<a class="button button-shadow login-btn" href="welcome.jsp" style="">Login</a>
 			</div>
 			
 		</header>
@@ -285,11 +308,36 @@ background:#3c570d
 				<div class="container">
 					<div class="hero-inner">
 						<div class="hero-copy" style="margin-top:0px !important; padding-top:0px !important;">
-							<h1 class="hero-title mt-0">Welcome to our Course Management
-								Website.</h1>
-							<p class="hero-paragraph">Our course management website is
+							<h1 class="hero-title mt-0" style="text-align-last: center;"> Welcome to Our, <br>Course Management System</h1>
+							<p class="hero-paragraph text-align-center" style="text-align-last: center;">Our course management website is
 								the perfect solution for instructors and students who want to
 								streamline their learning experience.</p>
+								<!-- Cards Section -->
+    <section class="container mt-5">
+        <div class="row">
+            <!-- Course Creation Card -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="https://pngimg.com/uploads/teacher/teacher_PNG84.png" alt="Course Creation" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Professor</h5>
+                        <p class="card-text">Professors can manage courses, and evaluate student performance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="https://pngimg.com/uploads/student/student_PNG98.png" alt="Course Creation" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Student</h5>
+                        <p class="card-text">Students can enroll in courses, and view their grades.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Repeat similar blocks for other cards ... -->
+        </div>
+    </section>
 							
 						</div>
 						<div class="hero-app">
@@ -303,6 +351,8 @@ background:#3c570d
 					</div>
 				</div>
 			</section>
+			
+			
 
 		</main>
 		

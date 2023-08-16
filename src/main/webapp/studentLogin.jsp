@@ -59,8 +59,7 @@ if(loginType!=null){
                                 </div>
               
                                 <div class="d-flex align-items-center justify-content-center pb-4">
-                                  <p class="mb-0 me-2">Don't have an account? </p> &nbsp;&nbsp;
-                                  <a href="#" class="">Create new</a>
+                                 
                                 </div>
               
                               </form>
@@ -73,7 +72,7 @@ if(loginType!=null){
 							<div class="hero-app-illustration">
 								
 							</div>
-							<img class="device-mockup" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1998567/coding-svg-clipart-md.png" alt="App preview">
+							<img class="device-mockup" src="https://www.workitdaily.com/media-library/college-student-carries-books-to-her-classes.jpg?id=26951082&width=1200&height=800&quality=85&coordinates=0%2C0%2C0%2C0" alt="App preview" style="border-radius:50%; width:400px; height:400px; object-fit:cover;">
                            
 							
 						</div>

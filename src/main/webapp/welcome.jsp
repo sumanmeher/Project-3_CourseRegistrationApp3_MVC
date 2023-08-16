@@ -46,10 +46,32 @@ try {
 <link rel="stylesheet" href="resource/css/style.css">
 <script
 	src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+	<style>
+	.button-shadow{
+	display:block; 
+	min-height:150px;
+	border-radius:10px;
+}
+
+.button-shadow img {
+height:100px;
+	padding-bottom:10px;
+	margin:auto;
+}
+	</style>
 </head>
 <body class="is-boxed has-animations">
 	<div class="body-wrap boxed-container">
-		<header class="site-header"> </header>
+		<header class="site-header">
+		
+		<div class="d-flex justify-content-between">
+            <a href="index.jsp" style="">
+            	<img alt="" class="ml-5" src="https://www.pinclipart.com/picdir/big/178-1785162_white-home-icon-png-vector-royalty-free-download.png" style="width:40px;">
+        	</a>
+        	
+        	</div>
+		
+		 </header>
 
 		<main>
 			<section class="hero">
@@ -58,14 +80,20 @@ try {
 						<div class="hero-copy">
 							<h1 class="hero-title mt-0">Welcome to our Course Management
 								Website.</h1>
-							<p class="hero-paragraph">Our course management website is
-								the perfect solution for instructors and students who want to
-								streamline their learning experience.</p>
+							<p class="hero-paragraph">Please Login Here to Continue enjoying our Application</p>
 							<div class="hero-cta">
-								<a class="button button-shadow" href="adminLogin.jsp">Admin
-									Login</a> <a class="button button-shadow" href="professorLogin.jsp">Professor
-									Login</a> <a class="button button-shadow" href="studentLogin.jsp">Student
-									Login</a>
+								<a class="button button-shadow" href="adminLogin.jsp">
+								<img src="https://www.pngmart.com/files/21/Admin-Profile-Vector-PNG-Photo.png">
+								<div>
+								Admin Login</div>
+									</a> 
+								<a class="button button-shadow" href="professorLogin.jsp">
+								<img src="https://th.bing.com/th/id/R.a7091c3bdb0ddac7cb6fa782169206d3?rik=1hdhS1WmohsFDA&riu=http%3a%2f%2fwww.kabertek.com%2fwp-content%2fuploads%2f2020%2f05%2f95917224-teacher-icon-vector-male-person-profile-avatar-with-a-book-and-teaching-in-school-college-or-univers.png&ehk=f8yP2fJTUo06y1ZTmhGp5eJ7nYRpgj8zx5VhvLcUjPE%3d&risl=&pid=ImgRaw&r=0">
+								<div>Professor Login</div></a> 
+								<a class="button button-shadow" href="studentLogin.jsp">
+								<img src="https://static.thenounproject.com/png/684049-200.png">
+								<div>Student Login</div>
+								</a>
 							</div>
 						</div>
 						<div class="hero-app">

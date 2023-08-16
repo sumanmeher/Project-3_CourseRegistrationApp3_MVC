@@ -72,7 +72,7 @@ if(loginType!=null){
 							<div class="hero-app-illustration">
 								
 							</div>
-							<img class="device-mockup" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1998567/coding-svg-clipart-md.png" alt="App preview">
+							<img class="device-mockup" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/34c00c10-035b-4bf9-afd2-8d82ed4da4ba/devuawy-2510297c-9326-4b33-9a5e-cbd2e7cce683.jpg/v1/fill/w_1280,h_1280,q_75,strp/money_heist___the_professor_portrait_by_thetakuhi_devuawy-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzM0YzAwYzEwLTAzNWItNGJmOS1hZmQyLThkODJlZDRkYTRiYVwvZGV2dWF3eS0yNTEwMjk3Yy05MzI2LTRiMzMtOWE1ZS1jYmQyZTdjY2U2ODMuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.M8MilAXkhy1G2BnbV0iQkKm30EriuwhSq9B5RJOdX24" alt="App preview" style="height:400px; width:auto; border-radius:50%;">
                            
 							
 						</div>

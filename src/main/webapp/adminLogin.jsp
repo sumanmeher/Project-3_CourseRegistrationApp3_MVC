@@ -33,7 +33,9 @@ if(loginType!=null){
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy" style="padding:30px !important; margin-top: -80px; border-radius: 10px; box-shadow: 0px 8px 24px #2f2222;">
-                            <h2 class="text-center">Admin Login</h2>
+                            <img src="https://www.pngmart.com/files/21/Admin-Profile-Vector-PNG-Photo.png" style="height:100px; margin:auto;">
+								
+                            <h2 class="text-center mt-1">Admin Login</h2>
 	                        
                             <br>
                             <form action="adminLogin" method="post">
@@ -71,7 +73,7 @@ if(loginType!=null){
 							<div class="hero-app-illustration">
 								
 							</div>
-							<img class="device-mockup" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1998567/coding-svg-clipart-md.png" alt="App preview">
+							<img class="device-mockup" src="https://rapidestimator.net/assets/images/image.png" alt="App preview">
                            
 							
 						</div>
